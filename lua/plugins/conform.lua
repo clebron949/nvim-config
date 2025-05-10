@@ -14,8 +14,9 @@ return {
         },
         formatters = {
             csharpier = {
-                command = "dotnet-csharpier",
-                args = { "--write-stdout" },
+                command = "csharpier",
+                args = { "format", "$FILENAME" },
+                stdin = false,
             },
             stylua = {
                 prepend_args = {
